@@ -1,0 +1,62 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1{
+  color: yellow;
+}*/
+
+.h1_portfolio {
+  display: inline;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-family: 'Tangerine', cursive;
+}
+/*.jumbo_portfolio {
+  margin-left: 120px;
+  margin-right: 120px;
+}*/
+
+.con_portfolio {
+  padding: 0px 100px;
+}
+
+.jumbo_con_portfolio {
+  text-align: center;
+}
+
+.con_portfolio .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.fa-line-chart {
+  margin-right: 20px;
+}
+
+.coin_data {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.coin_data .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coin_data .row .col-lg-8 p {
+  font-size: 20px;
+  font-family: monospace;
+  display: inline;
+  vertical-align: middle;
+}
+
+.coin_data .row .col-lg-2 {
+  text-align: center;
+}

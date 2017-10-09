@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+<h1>This is the markets page</h1>
+
+
+<div class="container con_portfolio">
+	<div class="jumbotron jumbo_portfolio">
+		<div class="container jumbo_con_portfolio">
+			<i class="fa fa-line-chart fa-4x" aria-hidden="true"></i>
+			<h1 class="h1_portfolio">thou portfolio</h1>
+			<!-- <a class="btn btn-primary btn-large" href="/portfolio/new">Add a Coin</a> -->
+		</div>
+	</div>
+  <div class="row">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Currency</th>
+            <th>Symbol</th>
+            <th>Price USD</th>
+            <th>Price BTC</th>
+            <th>Market Cap USD</th>
+            <th>% Change 24h</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% coins.forEach(function(coins){ %>
+            <tr>
+              <td><a href="#"><%= coins.name %></a></td>
+              <td><%= coins.symbol %></td>
+              <td><%= coins.price_usd %></td>
+              <td><%= coins.price_btc %></td>
+              <td><%= coins.market_cap_usd %></td>
+              <td><%= coins.percent_change_24h %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+<% include partials/footer %>
