@@ -31,8 +31,18 @@ var coinSchema = new mongoose.Schema({
   last_updated: {type: Date}
 });
 
+var portfolioSchema = new mongoose.Schema({
+  name: String,
+  exchange: String,
+  order: String,
+  units: Number,
+  trade_price: Number,
+  total_value: Number,
+  date: {type: Date, default: Date.now}
+});
+
 var Coin = mongoose.model("Coin", coinSchema);
-// var NewCoin = new Coin;
+var Portfolio = mongoose.model("Portfolio", portfolioSchema);
 
 var options = {
   url: 'https://api.coinmarketcap.com/v1/ticker/',
@@ -60,6 +70,30 @@ app.get("/market", function(req, res){
       res.render("market", {coins: allCoins});
     }
   })
+})
+
+app.get("/market/:id", function(req, res) {
+  Coin.find({id:req.params.id}, function(err, foundCoin) {
+    if(err){
+      console.log(err);
+    } else {
+      res.render("show", {coin: foundCoin[0]});
+    }
+  })
+});
+
+app.get("/portfolio", function(req, res){
+  Coin.find({},function(err, allCoins) {
+    if(err){
+      console.log(err);
+    } else {
+      res.render("portfolio", {coins: allCoins});
+    }
+  })
+})
+
+app.get("/portfolio/new", function(req, res){
+	res.render("newCoin");
 })
 
 // request(options, callback);

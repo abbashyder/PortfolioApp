@@ -11,24 +11,32 @@ h1{
   color: yellow;
 }*/
 
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.box {
+  background-color: lightsalmon;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.box i {
+  margin-right: 10px;
+}
+
 .h1_portfolio {
   display: inline;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 40px;
+  font-size: 45px;
   font-family: 'Tangerine', cursive;
 }
-/*.jumbo_portfolio {
-  margin-left: 120px;
-  margin-right: 120px;
-}*/
 
 .con_portfolio {
   padding: 0px 100px;
-}
-
-.jumbo_con_portfolio {
-  text-align: center;
 }
 
 .con_portfolio .row {
@@ -40,23 +48,42 @@ h1{
   margin-right: 20px;
 }
 
-.coin_data {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.coin_data .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.coin_data .row .col-lg-8 p {
-  font-size: 20px;
-  font-family: monospace;
-  display: inline;
-  vertical-align: middle;
-}
-
-.coin_data .row .col-lg-2 {
+.add-coin {
   text-align: center;
+}
+
+.add-coin a {
+  width: 30%
+}
+
+.portfolio-summary {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.portfolio-summary .row .col-lg-4 {
+  text-align: center;
+}
+
+.portfolio-container {
+  margin-top: 30px;
+  padding: 0px 300px;
+}
+
+.form-group {
+  display: inline-flex;
+  width: 100%;
+}
+
+.form-group label {
+  align-self: center;
+  width: 30%;
+}
+
+.order-group label {
+  width: 23%;
+}
+
+.form-check-inline {
+  width: 35%;
 }
